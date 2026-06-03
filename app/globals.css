@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @theme inline {
-  --font-sans: var(--font-lora);
-  --font-serif: var(--font-lora);
+  --font-sans: var(--font-literata);
+  --font-serif: var(--font-literata);
   --font-mono: var(--font-jetbrains-mono);
 }
 

@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Lora, JetBrains_Mono } from "next/font/google";
+import { Literata, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/SiteHeader";
 
-const lora = Lora({
-  variable: "--font-lora",
+const literata = Literata({
+  variable: "--font-literata",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${lora.variable} ${jetbrainsMono.variable} h-full antialiased`}
+      className={`${literata.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
       <body className="min-h-full">
         <div className="min-h-screen w-full flex justify-center px-5 sm:px-6 py-12 sm:py-16 md:py-24 selection:bg-stone-700 selection:text-white">
