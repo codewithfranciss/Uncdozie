@@ -1,4 +1,4 @@
-# Hi, I'm Dozie Offor
+# Hi, I'm Dozie.
 
 Backend Software Engineer focused on building scalable systems, databases, payment infrastructure, system programming, and developer tools.
 
@@ -68,4 +68,4 @@ I enjoy designing reliable backend systems and solving complex engineering probl
 
 ## Philosophy
 
-I learn by building. Most of my projects are focused on understanding how production systems work under the hood — from databases and payment platforms to distributed systems and developer tooling.
+I learn by building. Most of my projects are focused on understanding how production systems work under the hood from databases and payment platforms to distributed systems and developer tooling.
