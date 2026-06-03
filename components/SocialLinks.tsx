@@ -1,6 +1,6 @@
 const links = [
   {
-    href: "#",
+    href: "https://github.com/codewithfranciss",
     label: "GitHub",
     svg: (
       <svg viewBox="0 0 24 24" fill="currentColor" width={20} height={20}>
@@ -18,7 +18,7 @@ const links = [
     ),
   },
   {
-    href: "#",
+    href: "https://x.com/freshakafrancis",
     label: "X (Twitter)",
     svg: (
       <svg viewBox="0 0 24 24" fill="currentColor" width={20} height={20}>
