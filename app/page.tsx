@@ -15,12 +15,6 @@ export default function HomePage() {
       </section>
 
       <section className="space-y-4 sm:space-y-6 pt-6 sm:pt-8 border-t border-stone-800/50">
-        <div className="font-mono text-xs sm:text-sm text-stone-400 mb-3 sm:mb-4">
-          ~/Contact
-        </div>
-        <h2 className="text-2xl sm:text-3xl font-bold font-serif mb-4 sm:mb-6 text-white">
-          Contact
-        </h2>
         <p className="text-base sm:text-lg text-stone-300">
           You can reach me via email:{" "}
           <span className="font-mono text-[#d4a574]">
@@ -35,7 +29,7 @@ export default function HomePage() {
         <SocialLinks />
       </section>
 
-      <div className="flex items-center justify-center gap-2 pt-8 sm:pt-12 font-mono text-xs sm:text-sm text-stone-500">
+      <div className="flex items-center justify-center gap-2 font-mono text-xs sm:text-sm text-stone-500">
         <EyeIcon size={14} strokeWidth={1.5} />
         <span>
           you are the <span className="text-[#d4a574]">11th</span> visitor
