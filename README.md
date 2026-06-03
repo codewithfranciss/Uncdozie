@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Hi, I'm Dozie Offor
 
-## Getting Started
+Backend Software Engineer focused on building scalable systems, databases, payment infrastructure, system programming, and developer tools.
 
-First, run the development server:
+## About Me
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+I enjoy designing reliable backend systems and solving complex engineering problems. My interests include:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Distributed systems
+- Database internals
+- Payment processing
+- System programming
+- API design
+- Cloud infrastructure
+- Developer tools
+- System architecture
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Languages
+- Java
+- Go
+- TypeScript
+- Rust
 
-## Learn More
+### Backend
+- Spring Boot
+- Node.js
+- Express
+- NestJS
 
-To learn more about Next.js, take a look at the following resources:
+### Databases
+- PostgreSQL
+- MySQL
+- Redis
+- MongoDB
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### DevOps & Infrastructure
+- Docker
+- Kubernetes
+- NGINX
+- Linux
+- GitHub Actions
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Cloud
+- AWS
+- GCP
 
-## Deploy on Vercel
+## Areas of Interest
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Backend Engineering
+- Databases
+- Distributed Systems
+- Payment Systems
+- System Programming
+- Infrastructure Engineering
+- Performance Optimization
+- Software Architecture
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## What I'm Currently Learning
+
+- Database internals
+- Distributed systems
+- Payment infrastructure
+- Event-driven systems
+- Kubernetes
+- System design
+
+## Philosophy
+
+I learn by building. Most of my projects are focused on understanding how production systems work under the hood — from databases and payment platforms to distributed systems and developer tooling.
