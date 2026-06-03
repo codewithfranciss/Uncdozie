@@ -9,7 +9,7 @@ const links = [
     ),
   },
   {
-    href: "#",
+    href: "https://www.linkedin.com/in/francis-chidoziem/",
     label: "LinkedIn",
     svg: (
       <svg viewBox="0 0 24 24" fill="currentColor" width={20} height={20}>
