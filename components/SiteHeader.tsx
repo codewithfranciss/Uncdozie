@@ -23,7 +23,7 @@ export function SiteHeader() {
           ..
         </Link>
       )}
-      <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-serif mb-5 sm:mb-6 tracking-tight text-white">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold font-serif mb-5 sm:mb-6 tracking-tight text-white">
         Dozie
       </h1>
       <nav className="flex flex-wrap gap-x-4 gap-y-2 font-mono text-xs sm:text-sm">
