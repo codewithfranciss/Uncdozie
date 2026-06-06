@@ -1,7 +1,15 @@
 import Link from "next/link";
-import type { Post } from "@/data/posts";
 
-export function PostListItem({ post }: { post: Post }) {
+type PostListItemProps = {
+  post: {
+    slug: string;
+    title: string;
+    subtitle?: string;
+    date: string;
+  };
+};
+
+export function PostListItem({ post }: PostListItemProps) {
   return (
     <li className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-6 group">
       <span className="font-mono text-stone-500 text-xs sm:text-sm shrink-0 w-24 sm:w-28">

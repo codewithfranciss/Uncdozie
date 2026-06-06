@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Literata, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/SiteHeader";
+import { SanityLive } from "@/sanity/lib/live";
 
 const literata = Literata({
   variable: "--font-literata",
@@ -32,11 +33,12 @@ export default function RootLayout({
     >
       <body className="min-h-full">
         <div className="min-h-screen w-full flex justify-center px-5 sm:px-6 py-12 sm:py-16 md:py-24 selection:bg-stone-700 selection:text-white">
-          <div className="w-full max-w-[700px] flex flex-col">
+          <div className="w-full max-w-175 flex flex-col">
             <SiteHeader />
-            <main className="flex-grow">{children}</main>
+            <main className="grow">{children}</main>
           </div>
         </div>
+        <SanityLive />
       </body>
     </html>
   );
