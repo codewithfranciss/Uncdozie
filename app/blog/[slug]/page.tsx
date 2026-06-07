@@ -4,6 +4,7 @@ import { client } from "@/sanity/lib/client";
 import { sanityFetch } from "@/sanity/lib/live";
 import { POST_QUERY, POST_SLUGS_QUERY } from "@/sanity/lib/queries";
 import { PortableTextRenderer } from "@/components/blog/PortableTextRenderer";
+import { ViewTracker } from "@/components/blog/ViewTracker";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -45,8 +46,9 @@ export default async function BlogPostPage({ params }: Props) {
 
       {post.body && <PortableTextRenderer content={post.body} />}
 
-      <footer className="mt-24 flex flex-col items-center gap-3 text-stone-600">
-        <div className="w-2 h-2 rounded-full bg-stone-700" />
+      <footer className="mt-24 flex flex-col items-center gap-3">
+        <ViewTracker postId={post._id} initialViews={post.views ?? 0} />
+        <div className="w-2 h-2 rounded-full bg-stone-700 mt-2" />
       </footer>
     </article>
   );
