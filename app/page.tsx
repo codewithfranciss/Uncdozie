@@ -1,8 +1,12 @@
-import { EyeIcon } from "lucide-react";
+import { sanityFetch } from "@/sanity/lib/live";
+import { SITE_STATS_QUERY } from "@/sanity/lib/queries";
 import { FeaturedProjects } from "@/components/home/FeaturedProjects";
 import { SocialLinks } from "@/components/SocialLinks";
+import { SiteViewTracker } from "@/components/SiteViewTracker";
 
-export default function HomePage() {
+export default async function HomePage() {
+  const { data: siteStats } = await sanityFetch({ query: SITE_STATS_QUERY });
+
   return (
     <div className="animate-fade-up space-y-12 sm:space-y-16">
       <section className="space-y-4 sm:space-y-6 text-base sm:text-lg leading-relaxed text-stone-300">
@@ -29,12 +33,7 @@ export default function HomePage() {
         <SocialLinks />
       </section>
 
-      <div className="flex items-center justify-center gap-2 font-mono text-xs sm:text-sm text-stone-500">
-        <EyeIcon size={14} strokeWidth={1.5} />
-        <span>
-          you are the <span className="text-[#d4a574]">11th</span> visitor
-        </span>
-      </div>
+      <SiteViewTracker initialViews={siteStats?.totalViews ?? 0} />
     </div>
   );
 }
