@@ -4,8 +4,11 @@ import { FeaturedProjects } from "@/components/home/FeaturedProjects";
 import { SocialLinks } from "@/components/SocialLinks";
 import { SiteViewTracker } from "@/components/SiteViewTracker";
 
+type SiteStats = { totalViews: number } | null;
+
 export default async function HomePage() {
   const { data: siteStats } = await sanityFetch({ query: SITE_STATS_QUERY });
+  const stats = siteStats as SiteStats;
 
   return (
     <div className="animate-fade-up space-y-12 sm:space-y-16">
@@ -33,7 +36,7 @@ export default async function HomePage() {
         <SocialLinks />
       </section>
 
-      <SiteViewTracker initialViews={siteStats?.totalViews ?? 0} />
+      <SiteViewTracker initialViews={stats?.totalViews ?? 0} />
     </div>
   );
 }
