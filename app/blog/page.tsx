@@ -2,8 +2,18 @@ import { sanityFetch } from "@/sanity/lib/live";
 import { POSTS_QUERY } from "@/sanity/lib/queries";
 import { PostListItem } from "@/components/blog/PostListItem";
 
+type PostSummary = {
+  _id: string;
+  title?: string;
+  subtitle?: string;
+  slug?: string;
+  publishedAt?: string;
+  views?: number;
+};
+
 export default async function BlogPage() {
-  const { data: posts } = await sanityFetch({ query: POSTS_QUERY });
+  const { data } = await sanityFetch({ query: POSTS_QUERY });
+  const posts = (data as PostSummary[] | null) ?? [];
 
   return (
     <div className="animate-fade-up space-y-6 sm:space-y-8">
@@ -15,7 +25,7 @@ export default async function BlogPage() {
         <p className="font-mono text-sm text-stone-500">No posts yet.</p>
       ) : (
         <ul className="space-y-5 sm:space-y-8">
-          {posts.map((post) => (
+          {posts.map((post: PostSummary) => (
             <PostListItem
               key={post.slug}
               post={{

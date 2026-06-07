@@ -1,10 +1,21 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import type { PortableTextBlock } from "@portabletext/types";
 import { client } from "@/sanity/lib/client";
 import { sanityFetch } from "@/sanity/lib/live";
 import { POST_QUERY, POST_SLUGS_QUERY } from "@/sanity/lib/queries";
 import { PortableTextRenderer } from "@/components/blog/PortableTextRenderer";
 import { ViewTracker } from "@/components/blog/ViewTracker";
+
+type Post = {
+  _id: string;
+  title: string;
+  subtitle?: string;
+  slug: string;
+  publishedAt?: string;
+  views?: number;
+  body?: PortableTextBlock[];
+};
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -15,13 +26,15 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const { data: post } = await sanityFetch({ query: POST_QUERY, params: { slug } });
+  const { data } = await sanityFetch({ query: POST_QUERY, params: { slug } });
+  const post = data as Post | null;
   return { title: post ? `${post.title} — Dozie` : "Post not found" };
 }
 
 export default async function BlogPostPage({ params }: Props) {
   const { slug } = await params;
-  const { data: post } = await sanityFetch({ query: POST_QUERY, params: { slug } });
+  const { data } = await sanityFetch({ query: POST_QUERY, params: { slug } });
+  const post = data as Post | null;
 
   if (!post) notFound();
 
