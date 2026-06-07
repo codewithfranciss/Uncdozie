@@ -26,3 +26,7 @@ export const POST_QUERY = defineQuery(`
 export const POST_SLUGS_QUERY = defineQuery(`
   *[_type == "post"] { "slug": slug.current }
 `);
+
+export const SITE_STATS_QUERY = defineQuery(`
+  *[_id == "siteStats"][0] { totalViews }
+`);
